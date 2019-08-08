@@ -1,0 +1,35 @@
+.menu {
+	padding: 2rem 0;
+
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		display: block;
+		padding: 0.5rem;
+		transition: all 0.2s ease;
+		border-bottom: 2px solid transparent;
+
+		&:not(:last-child) {
+			margin-right: 3rem;
+		}
+
+		&:hover {
+			border-bottom: 2px solid black
+		}
+	}
+
+	&__link {
+
+		&:link,
+		&:visited {
+			text-decoration: none;
+			font-size: 3rem;
+			font-weight: bold;
+			color: black;
+		}
+	}
+
+}
