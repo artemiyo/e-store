@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import FormInput from "../FormInput";
 import Button from "../Button";
+import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 
 import "./SignIn";
 
@@ -55,7 +56,9 @@ class SignIn extends Component {
         </div>
         <div className="form__buttons">
           <Button type="submit">Sign In</Button>
-          <Button googleSignInBtn>Sign In With Google</Button>
+          <Button onClick={signInWithGoogle} googleSignInBtn>
+            Sign In With Google
+          </Button>
         </div>
       </form>
     );

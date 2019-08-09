@@ -7,7 +7,6 @@ import Button from "../Button";
 import "./User.scss";
 
 const User = ({ history, match }) => {
-  console.log(match);
   return (
     <div className="user">
       <Button onClick={() => history.push(`${match.url}sign-in`)}>
