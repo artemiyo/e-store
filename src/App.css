@@ -13,10 +13,9 @@ html {
 
 body {
 	font-size: 1.6rem;
-	background-color: #cbcbcb
 }
 
 .container {
 	max-width: 120rem;
-	margin: 0 auto
+	margin: 0 auto;
 }

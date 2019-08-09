@@ -1,3 +1,5 @@
+$menu-item-color: black;
+
 .menu {
 	padding: 2rem 0;
 
@@ -17,7 +19,7 @@
 		}
 
 		&:hover {
-			border-bottom: 2px solid black
+			border-bottom: 2px solid $menu-item-color
 		}
 	}
 
@@ -28,7 +30,7 @@
 			text-decoration: none;
 			font-size: 3rem;
 			font-weight: bold;
-			color: black;
+			color: $menu-item-color;
 		}
 	}
 

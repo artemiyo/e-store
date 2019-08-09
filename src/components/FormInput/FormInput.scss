@@ -1,0 +1,72 @@
+@mixin shrinkLabel() {
+	top: -14px;
+	font-size: 14px;
+	color: black
+}
+
+.form {
+	width: 25%;
+	border-radius: 1rem;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+
+	&__field {
+		position: relative;
+		margin-bottom: 3rem;
+	}
+
+	&__title {
+		font-size: 3rem;
+		margin-bottom: 4rem;
+	}
+
+	&__label {
+		position: absolute;
+		top: 0px;
+		font-size: 1.8rem;
+		display: block;
+		transition: all 0.3s ease;
+
+		&.shrink {
+			@include shrinkLabel()
+		}
+	}
+
+	&__input {
+		background: none;
+		width: 30rem;
+		height: 3.5rem;
+		font-size: 1.6rem;
+		outline: none;
+		border: none;
+		border-bottom: 2px solid black;
+
+		&:focus~.form__label {
+			@include shrinkLabel()
+		}
+
+		&[type="password"] {
+			letter-spacing: 0.3em;
+		}
+	}
+
+	&__text {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__link {
+
+		&:link,
+		&:visited {
+			margin-left: 0.5rem;
+			display: block;
+			font-weight: bold;
+			color: black
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		margin-top: 3rem;
+	}
+}

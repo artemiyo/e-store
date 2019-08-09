@@ -1,12 +1,15 @@
+$section-item-color: white;
+
 .sections__item {
-	width: 100%;
-	height: 40rem;
+	width: 70%;
+	height: 20rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 10rem;
-	color: white;
+	font-size: 5rem;
+	color: $section-item-color;
 	cursor: pointer;
+	margin: 0 auto;
 
 
 	&:link,

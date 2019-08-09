@@ -2,7 +2,7 @@ import React from "react";
 
 import NavMenu from "../NavMenu";
 import Logo from "../Logo";
-import Icons from "../Icons";
+import User from "../User";
 
 import "./Header.scss";
 
@@ -11,7 +11,7 @@ const Header = () => {
     <div className="navigation">
       <Logo />
       <NavMenu />
-      <Icons />
+      <User />
     </div>
   );
 };

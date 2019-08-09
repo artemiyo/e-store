@@ -8,25 +8,29 @@ import MenPage from "./pages/MenPage";
 import WomenPage from "./pages/WomenPage";
 import LifestylePage from "./pages/LifestylePage";
 import ContactsPage from "./pages/ContactsPage";
+import SignUpPage from "./pages/SignUpPage";
+import SignInPage from "./pages/SignInPage";
 import "./App.css";
 
-const App = () => (
-  <Fragment>
-    <header className="header">
-      <div className="container">
-        <Header />
-      </div>
-    </header>
-    <div className="container">
+const App = () => {
+  return (
+    <Fragment>
+      <header className="header">
+        <div className="container">
+          <Header />
+        </div>
+      </header>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/he" component={MenPage} />
-        <Route path="/she" component={WomenPage} />
-        <Route path="/lifestyle" component={LifestylePage} />
-        <Route path="/contacts" component={ContactsPage} />
+        <Route exact path="/he" component={MenPage} />
+        <Route exact path="/she" component={WomenPage} />
+        <Route exact path="/lifestyle" component={LifestylePage} />
+        <Route exact path="/contacts" component={ContactsPage} />
+        <Route exact path="/sign-up" component={SignUpPage} />
+        <Route exact path="/sign-in" component={SignInPage} />
       </Switch>
-    </div>
-  </Fragment>
-);
+    </Fragment>
+  );
+};
 
 export default App;

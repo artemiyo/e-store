@@ -1,10 +1,12 @@
-.icons {
+$color-item: black;
+
+.user {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 
 	&__item {
-		color: black;
+		color: $color-item;
 		font-size: 2.5rem;
 		cursor: pointer;
 

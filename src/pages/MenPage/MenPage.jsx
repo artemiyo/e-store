@@ -1,5 +1,7 @@
 import React from "react";
 
-const MenPage = () => <div>MEN</div>;
+const MenPage = () => {
+  return <div>MEN</div>;
+};
 
 export default MenPage;

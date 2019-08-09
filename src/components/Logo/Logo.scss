@@ -1,13 +1,16 @@
+$logo-text-color: white;
+$logo-bg: black;
+
 .logo {
 	display: block;
 	font-size: 4rem;
-	background-color: black;
+	background-color: $logo-bg;
 	padding: 1rem;
 
 
 	&:link,
 	&:visited {
 		text-decoration: none;
-		color: white
+		color: $logo-text-color
 	}
 }

@@ -1,0 +1,35 @@
+$color-btn: #4e4eef;
+$color-btn-google: #f15252;
+
+@mixin darken-bg($color) {
+	background-color: darken($color, 5%)
+}
+
+.btn {
+	width: 14rem;
+	height: 4rem;
+	border: none;
+	background-color: $color-btn;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 1.6rem;
+	transition: all 0.1s ease-in;
+
+	&:not(:last-child) {
+		margin-right: 2rem;
+	}
+
+	&:hover {
+		@include darken-bg($color-btn)
+	}
+}
+
+.google {
+	background-color: $color-btn-google;
+
+	&:hover {
+		@include darken-bg($color-btn-google)
+	}
+}
