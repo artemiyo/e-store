@@ -19,13 +19,21 @@ class SignIn extends Component {
     });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
 
-    this.setState({
-      email: "",
-      password: ""
-    });
+    const { email, password } = this.state;
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+
+      this.setState({
+        email: "",
+        password: ""
+      });
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
   render() {

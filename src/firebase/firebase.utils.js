@@ -1,4 +1,4 @@
-import firebase from "firebase";
+import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
 
@@ -14,8 +14,32 @@ const config = {
 
 firebase.initializeApp(config);
 
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+  if (!userAuth) return;
+
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+
+  const userSnapshot = await userRef.get();
+
+  if (!userSnapshot.exists) {
+    const { displayName, email } = userAuth;
+
+    try {
+      await userRef.set({
+        displayName,
+        email,
+        ...additionalData
+      });
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+
+  return userRef;
+};
+
 export const auth = firebase.auth();
-export const firesotre = firebase.firestore();
+export const firestore = firebase.firestore();
 
 // Sign-in with Google Auth
 const provider = new firebase.auth.GoogleAuthProvider();
