@@ -11,9 +11,7 @@ import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import Header from "./components/Header";
 
 import HomePage from "./pages/HomePage";
-import MenPage from "./pages/MenPage";
-import WomenPage from "./pages/WomenPage";
-import LifestylePage from "./pages/LifestylePage";
+import ShopPageContainer from "./pages/ShopPage";
 import ContactsPage from "./pages/ContactsPage";
 import SignUpPage from "./pages/SignUpPage";
 import SignInPage from "./pages/SignInPage";
@@ -54,9 +52,7 @@ class App extends Component {
         </header>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/he" component={MenPage} />
-          <Route exact path="/she" component={WomenPage} />
-          <Route exact path="/lifestyle" component={LifestylePage} />
+          <Route path="/:category" component={ShopPageContainer} />
           <Route exact path="/contacts" component={ContactsPage} />
           <Route exact path="/sign-up" component={SignUpPage} />
           <Route

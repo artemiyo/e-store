@@ -8,12 +8,12 @@ const NavMenu = () => {
     <nav className="menu">
       <ul className="menu__list">
         <li className="menu__item">
-          <Link className="menu__link" to="/he">
+          <Link className="menu__link" to="/men">
             HE
           </Link>
         </li>
         <li className="menu__item">
-          <Link className="menu__link" to="/she">
+          <Link className="menu__link" to="/women">
             SHE
           </Link>
         </li>
