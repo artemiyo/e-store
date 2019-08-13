@@ -10,7 +10,8 @@ export const selectCollections = createSelector(
 export const selectCollection = collectionUrlParam =>
   createSelector(
     [selectCollections],
-    collections => (collections ? collections[collectionUrlParam] : null)
+    collections =>
+      collections[collectionUrlParam] ? collections[collectionUrlParam] : null
   );
 
 export const selectIsCollectionFetching = createSelector(

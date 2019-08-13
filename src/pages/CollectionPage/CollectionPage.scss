@@ -1,0 +1,15 @@
+.collection-page {
+
+	margin-top: 3rem;
+
+	&__title {
+		font-size: 5rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.collection-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start
+}

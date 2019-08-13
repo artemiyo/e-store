@@ -10,7 +10,7 @@ const SectionItem = ({ section, history, match }) => {
         background: `linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${imageUrl}) no-repeat top /cover`
       }}
       className="sections__item"
-      onClick={() => history.push(`${match.url}${path}`)}
+      onClick={() => history.push(`${match.url}shop/${path}`)}
     >
       {name.toUpperCase()}
     </div>

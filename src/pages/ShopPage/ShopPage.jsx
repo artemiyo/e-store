@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Route } from "react-router-dom";
 
 import { fetchCollectionsStartAsync } from "../../redux/shop/shopActions";
+import CollectionPageContainer from "../CollectionPage/CollectionPageContainer";
 
 class ShopPage extends Component {
   componentDidMount() {
@@ -12,10 +13,11 @@ class ShopPage extends Component {
   }
 
   render() {
+    const { match } = this.props;
     return (
       <section className="shop">
         <div className="container">
-          <Route />
+          <Route path={`${match.path}`} component={CollectionPageContainer} />
         </div>
       </section>
     );
