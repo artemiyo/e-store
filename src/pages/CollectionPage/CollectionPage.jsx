@@ -11,7 +11,7 @@ const CollectionPage = props => {
 
   return (
     <div className="collection-page">
-      <h1 className="collection-page__title">{title}</h1>
+      <h1 className="heading-primary">{title}</h1>
       <div className="collection-items">
         {items.map((collection, idx) => (
           <CollectionItem key={items[idx].id} collection={collection} />

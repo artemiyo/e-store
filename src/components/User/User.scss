@@ -5,10 +5,13 @@ $color-item: black;
 	align-items: center;
 	justify-content: space-between;
 
+	&__cart {
+		cursor: pointer;
+	}
+
 	&__item {
 		color: $color-item;
 		font-size: 2.5rem;
-		cursor: pointer;
 
 		&:not(:last-child) {
 			margin-right: 3rem;

@@ -21,8 +21,12 @@ const User = ({ history, match, currentUser }) => {
           Sign in
         </Button>
       )}
-
-      <FontAwesomeIcon className="user__item" icon={faShoppingBag} />
+      <div
+        onClick={() => history.push(`${match.url}cart`)}
+        className="user__cart"
+      >
+        <FontAwesomeIcon className="user__item" icon={faShoppingBag} />
+      </div>
     </div>
   );
 };

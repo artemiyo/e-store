@@ -1,0 +1,32 @@
+.cart {
+	position: relative;
+
+	&__empty {
+		font-size: 4rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%)
+	}
+}
+
+
+.cart-header {
+	display: flex;
+	justify-content: space-between;
+
+	&__block {
+		width: 23%;
+
+		&:last-child {
+			width: 8%;
+		}
+	}
+}
+
+.cart-total {
+	margin-top: 3rem;
+	font-size: 3rem;
+	display: flex;
+	justify-content: flex-end;
+}

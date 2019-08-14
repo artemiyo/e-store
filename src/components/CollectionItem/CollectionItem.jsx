@@ -1,11 +1,15 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import Button from "../../components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 
+import { addItem } from "../../redux/cart/cartActions";
+
 import "./CollectionItem.scss";
 
-const CollectionItem = ({ collection }) => {
+const CollectionItem = ({ collection, addItem }) => {
   const { name, price, imageUrl } = collection;
 
   return (
@@ -17,7 +21,7 @@ const CollectionItem = ({ collection }) => {
           <span className="collection-item__price">${price}</span>
         </div>
       </div>
-      <Button>
+      <Button onClick={() => addItem(collection)}>
         <FontAwesomeIcon
           className="collection-item__icon"
           icon={faShoppingBag}
@@ -28,4 +32,7 @@ const CollectionItem = ({ collection }) => {
   );
 };
 
-export default CollectionItem;
+export default connect(
+  null,
+  { addItem }
+)(CollectionItem);

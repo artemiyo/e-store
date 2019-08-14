@@ -15,6 +15,7 @@ import ShopPage from "./pages/ShopPage";
 import ContactsPage from "./pages/ContactsPage";
 import SignUpPage from "./pages/SignUpPage";
 import SignInPage from "./pages/SignInPage";
+import CartPage from "./pages/CartPage";
 import "./App.css";
 
 class App extends Component {
@@ -55,6 +56,7 @@ class App extends Component {
           <Route path="/contacts" component={ContactsPage} />
           <Route path="/sign-up" component={SignUpPage} />
           <Route path="/shop/:category" component={ShopPage} />
+          <Route path="/cart" component={CartPage} />
           <Route
             path="/sign-in"
             render={() =>
